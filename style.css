@@ -1,0 +1,86 @@
+/* Variables */
+:root {
+	--red: #581a1d;
+	--orange: #b56f1e;
+	--yellow: #ebc845;
+	--white: #fefdfc;
+	--veryLightYellow: #f5f2e5;
+	--black: #241f20;
+}
+
+/* General Styles */
+
+body {
+	margin: 0;
+	font-family: Helvetica;
+	background: var(--veryLightYellow);
+}
+
+section {
+	margin: 115px auto 15px;
+	padding: 75px;
+	width: 80%;
+	background-color: var(--white);
+}
+
+div {
+	font-size: 15px;
+	color: var(--black)
+}
+
+h1 {
+	font-size: 25px;
+}
+
+/* Navigation Bar */
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: linear-gradient(to right, #ebc845, #b56f1e, #581a1d);
+	border-bottom: 5px solid var(--white);
+}
+
+nav {
+	height: 85px;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	color: var(--veryLightYellow);
+}
+
+#logo {
+	margin: 0 30px;
+	font-size: 30px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	color: var(--white);
+}
+
+.menu {
+	display: flex;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	letter-spacing: 3px;
+}
+
+.menu a {
+	display: block;
+	text-align: center;
+	color: inherit;
+	font-size: inherit;
+	font-weight: 300;
+	line-height: 35px;
+	height: 35px;
+	margin: 0px 5px;
+	padding: 0px 25px;
+	text-decoration: none;
+	transition: 0.3s ease-out;
+}
+
+.menu a:hover {
+	background-color: rgba(247, 246, 241, 0.2);
+	color: var(--red);
+}

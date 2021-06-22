@@ -344,7 +344,7 @@ img {
 }
 
 /* Resizing and reorganizing things once the page gets small enough */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
 	.horizontal-boxes {
 		flex-wrap: wrap;
 	}

@@ -73,6 +73,7 @@ img {
 
 /* Aligning images and any text that may be around them */
 .horizontal-boxes {
+	/* Flex boxes are used a lot for easy scaling and having elements next to each other */
 	display: flex;
 	padding: 10px;
 }
@@ -106,14 +107,15 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 100px;
+	height: 150px;
 	bottom: 0;
 	width: 100%;
 	background-color: var(--white);
 }
 
 footer div {
-	margin: 6px auto;
+	margin: 3px auto;
+	align-items: center;
 }
 
 /* Navigation Bar ================================================================================= */
@@ -308,6 +310,12 @@ the margins aren't too large at the top and bottom */
 	background: linear-gradient(to right, #e8c35a, #bb6368, #924372);
 }
 
+#hobbies-images {
+	width: 20%; 
+	min-width: 150px; 
+	max-width: 250px;
+}
+
 /* Anchors used to link to different parts of the page */
 .anchor {
 	position: relative;
@@ -403,11 +411,7 @@ td {
 		flex-direction: column;
 	}
 
-	.gallery-img {
-		width: 100%;
-	}
-
-	.center {
+	.gallery-img, .center {
 		width: 100%;
 	}
 }
@@ -435,8 +439,21 @@ td {
 	}
 }
 
-/* Moving the footer to it's proper position for the programming page */
-@media screen and (min-width: 1250px) and (min-height: 960px){
+
+@media screen and (max-width: 584px){
+	.section-top {
+		margin: 150px auto 15px;
+	}
+}
+
+/* Moving the footers to their proper positions for some pages */
+@media screen and (min-height: 550px){
+	#sources-footer {
+		position: absolute;
+	}
+}
+
+@media screen and (min-width: 1250px) and (min-height: 995px){
 	#programming-footer {
 		position: absolute;
 	}

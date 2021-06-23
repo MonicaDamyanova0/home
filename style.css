@@ -107,8 +107,9 @@ footer {
 	flex-direction: column;
 	justify-content: center;
 	height: 100px;
-	background-color: var();
-	border-top: 5px solid var(--white);
+	bottom: 0;
+	width: 100%;
+	background-color: var(--white);
 }
 
 footer div {
@@ -431,5 +432,12 @@ td {
 		width: 100%;
 		margin: 10px;
 		background-color: var(--white);
+	}
+}
+
+/* Moving the footer to it's proper position for the programming page */
+@media screen and (min-width: 1250px) and (min-height: 960px){
+	#programming-footer {
+		position: absolute;
 	}
 }

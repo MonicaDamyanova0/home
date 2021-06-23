@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
+	<!-- Metadata of the website -->
 	<head>
 		<meta charset="UTF-8">
 		<title>About Monica | Hobbies</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
+	<!-- Content of the website -->
 	<body>
+		<!-- Header with the navigation bar and the website title -->
 		<header>
 			<nav>
-				<div id="logo">About Monica</div>
+				<div class="logo">About Monica</div>
 				<ul class="menu">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="hobbies.html">Hobbies</a></li>
@@ -18,64 +21,79 @@
 		<section class="section-top">
 			<h1>Hobbies</h1>
 			<hr>
-			<div style="background: linear-gradient(to right, #e8c35a, #bb6368, #924372);">
+			<!-- Navigation bar for navigating the hobbies page -->
+			<div id="hobbies-menu-background">
 				<nav>
-					<ul class="menu">
-						<li><a href="#art">Art</a></li>
-						<li><a href="#animation">Animation</a></li>
-						<li><a href="#programming">Programming</a></li>
-						<li><a href="#other">Other Hobbies</a></li>
+					<ul class="menu" id="center-hobbies">
+						<li><a href="#art-anchor">Art</a></li>
+						<li><a href="#animation-anchor">Animation</a></li>
+						<li><a href="#programming-anchor">Programming</a></li>
+						<li><a href="#other-anchor">Other Hobbies</a></li>
 					</ul>
 				</nav>
 			</div>
 			<hr>
-			<div id="art">
+			<!-- Art section -->
+			<div>
+				<!-- Special anchors are added to each section so the header doesn't cover the title when the page scrolls -->
+				<div class="anchor" id="art-anchor"></div>
 				<h2>Art</h2>
 				<p>
-					I've been drawing since I was very little, since I could really remember. It's probably the hobby I do the most and the thing that I'm best at. I draw basically everyday even if it's just a few small doodles. I typically do more digital art now since it's much quicker for me and I don't have to clean anything after. Sometimes I also do traditional art, but not as frequently as I used to. 
+					I've been drawing since I was very little, since I could really remember. It's probably the hobby I do the most and the thing that I'm best at. I draw basically everyday even if it's just a few small doodles. I typically do more digital art now since it's much quicker for me and I don't have to clean up anything afterwards. Sometimes I also do traditional art, but not as frequently as I used to. 
 				</p>
 				<h3>3D Modeling</h3>
 				<p>
-					Along with drawing, I've also tried some 3D modeling. I learned how to do it during the summer of 2020. I made a few different models which was a lot of fun, yet kind of challenging. There are lots of parts to 3D modeling you need to learn like the actual modeling bit, rigging, making textures, etc. I don't model much anymore since it takes quite a while to do and I just haven't really gotten around to it yet.
+					Along with drawing, I've also tried some 3D modeling. I learned how to do it during the summer of 2020. I made a few different models which was a lot of fun, yet kind of challenging. There are lots of parts to 3D modeling you need to learn like the actual modeling bit, rigging, making textures, etc. I haven't model much recently since it takes quite a while to do.
 				</p>
+				<!-- A button linking to the art.html page for more information -->
 				<a href="art.html" class="button">Read More</a>
+				<hr>
 			</div>
-			<hr>
-			<div id="animation">
+			<!-- Animation section -->
+			<div>
+				<div class="anchor" id="animation-anchor"></div>
 				<h2>Animation</h2>
 				<p>
-					I started animating some time around grade 5 when I was able to mess around with Photoshop. For a while I had wanted to learn how to animate and I had seen other people animating with Photoshop so I though I might as well try to. It was a fun experience and continued animating when I found the time to. I don't use Photoshop to animate anymore though, I use FlipaClip and Procreate.
+					I started animating some time around grade 5 when I was able to mess around with Photoshop. For a while I had wanted to learn how to animate and I had seen other people animating with Photoshop so I though I might as well try to. It was a fun experience and continued animating when I found the time to. I don't use Photoshop to animate anymore though, I use FlipaClip and Procreate instead.
 				</p>
 				<h3>Video Editing</h3>
 				<p>
-					For a long time I would soley use animation programs to make an finalize my animations which would take a while, so I thought if I were to use a video editing program, I could probably do it faster. So I downloaded DaVinci Resolve and started learning how to use it. I haven't made a lot with it yet, but I plan on doing more.
+					For a long time I would solely use animation programs to make and finalize my animations which would take a while, so I thought if I were to use a video editing program, I could probably do it faster. So I downloaded DaVinci Resolve and started learning how to use it. I haven't made a lot with it yet, but I plan on doing more.
 				</p>
+				<!-- A button linking to the animation.html page for more information -->
 				<a href="animation.html" class="button">Read More</a>
+				<hr>
 			</div>
-			<hr>
-			<div id="programming">
+			<!-- Programming section -->
+			<div>
+				<div class="anchor" id="programming-anchor"></div>
 				<h2>Programming</h2>
 				<p>
-					Programming is a newer hobby of mine. I started about a year ago, but I wouldn't do it frequently enough to actually become good at it. It was this year when my brother and I made a simple dictionary program when I started getting the hang of it. Doing all the homework also helped a lot. 
+					Programming is a newer hobby of mine. I started about a year ago, but I wouldn't do it frequently enough to actually become good at it. It was this year, when my brother and I made a simple dictionary program, when I started getting the hang of it. Doing all the homework also helped a lot in improving. 
 				</p>
+				<!-- A button linking to the programming.html page for more information -->
 				<a href="programming.html" class="button">Read More</a>
+				<hr>
 			</div>
-			<hr>
-			<div id="other">
-				<h2>Other Smaller Hobbies</h2>
+			<!-- Other hobbies section -->
+			<div>
+				<div class="anchor" id="other-anchor"></div>
+				<h2>Other Hobbies</h2>
 				<p>
 					I also do some other things in my spare time like:
-					<ul>
-						<li>Watching videos on YouTube</li>
-						<li>Watching shows on Netflix</li>
-						<li>Playing video games like:
-							<ul>
-								<li>Minecraft</li>
-								<li>Stardew Valley</li>
-								<li>Some others, but I don't play them that much</li>
-							</ul>
-						</li>
-					</ul>
+				</p>
+				<ul>
+					<li>Watching videos on YouTube</li>
+					<li>Watching shows on Netflix</li>
+					<li>Playing video games like:
+						<ul>
+							<li>Minecraft</li>
+							<li>Stardew Valley</li>
+							<li>Some others, but I don't play them that much</li>
+						</ul>
+					</li>
+				</ul>
+				<p>
 					I also like to sit outside and enjoy the weather, sometimes I go for walks or play on my trampoline. 
 				</p>
 			</div>

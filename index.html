@@ -1,83 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+	<!-- Metadata of the website -->
 	<head>
 		<meta charset="UTF-8">
 		<title>About Monica</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
+	<!-- Content of the website -->
 	<body>
+		<!-- Header with the navigation bar and the website title -->
 		<header>
 			<nav>
-				<div id="logo">About Monica</div>
+				<div class="logo">About Monica</div>
 				<ul class="menu">
 					<li><a href="index.html">Home</a></li>
 					<li><a href="hobbies.html">Hobbies</a></li>
 				</ul>
 			</nav>
 		</header>
-		<div class="image-container landscape-image">
+		<!-- First image with a short introduction -->
+		<div class="image-container" id="landscape-image">
 			<div class="intro">
 				Hello, I'm Monica. I'm 15 and I'm a grade 9 at VPCI.
 			</div>
 		</div>
+		<!-- A section which contains some information about my family and schooling -->
 		<section>
 			<h1>About Me</h1>
+			<!-- The topics were put into their own containers so the content 
+				in each one could be organized easily and in the same way-->
+			<!-- Family topic -->
 			<div class="topic-container">
 				<h2 class="topic-title">Family</h2>
 				<div class="text-container">
 					<p>
-						I live at home with my mom, dad and older brother. They immigrated here from Bulgaria a few years before I was born. We live in a small house on a pretty quiet street. It's really nice to sit outside and do work there whenever the weather is nice. 
+						I live at home with my mom, dad and older brother. They immigrated here from Bulgaria a few years before I was born. We live in a small house on a pretty quiet street. It's really nice to sit outside and do work whenever the weather is nice. 
 					</p>
 					<p>
-						Back before the pandemic, my family and I would try to travel more often and do fun things. None of our other family lives in Canada so we try to go visit all of them in Bulgaria whenever we could, usually every other year for about a month. We would also go to Cuba a lot since it's warm and the beaches are nice. We would usually go there for a week or two. Sometimes
+						Back before the pandemic, my family and I would try to travel more often and do fun things. None of our other family lives in Canada so we would try to go visit all of them in Bulgaria whenever we could, usually every other year for about a month. We would also go to Cuba a lot since it's warm and the beaches are nice. Usually, we go there for a week or two. Sometimes we go to other places, but those trips are usually over a weekend, lik ethe time we went to New York.
 					</p>
 				</div>
 			</div>
 			<hr>
+			<!-- School topic -->
 			<div class="topic-container">
 				<h2 class="topic-title">School</h2>
 				<div class="text-container">
 					<p>
-						In elementary school I went to Clairlea P.S for 3 years. It was pretty close to my house, so when my grandma would come and visit for a few months she would walk me to school every day. I don't remember much, but I do remember getting into trouble.
+						In elementary school I went to Clairlea P.S for 3 years. It was pretty close to my house, so when my grandma would come and visit for a few months she would walk me to school every day. I don't remember much, but I do remember getting into trouble (Nothing major xD).
 					</p>
 					<p>
 						In grade 4 I switched schools and started going to Selwyn E.S. It was a much smaller school and quite a bit farther from my house. I went there because of the gifted program and had a good 2 years there. I didn't really want to continue the gifted program after that though and thought it would be fun to learn French, so that's what I did.
 					</p>
 					<p>
-						I went to Cosburn M.S since they had the Intensive Extended French program. It was quite interesting and fun to learn a new language, but it was also quite difficult since almost all of our other classes were in French as well. I didn't do super good in grade 6, but I started getting the hang of it more in grade 7.
+						I went to Cosburn M.S since they had an Intensive Extended French program. It was quite interesting and fun to learn a new language, but it was also quite difficult since almost all of our other classes were in French as well. I didn't do very well with it in grade 6, but I started getting the hang of it more in grade 7.
 					</p>
 				</div>
 			</div>
 		</section>
-		<div class="image-container fall-image">
-			<h1 id="hobbies-title">Some of My Hobbies</h1>
+		<!-- The second image -->
+		<div class="image-container" id="fall-image">
+			<h2 id="hobbies-title">Some of My Hobbies</h2>
+			<!-- Each hobby is put into a box with a title, short description and a button -->
 			<div class="box-container">
+				<!-- Art box -->
 				<div class="box" id="art">
-					<h1 class="box-title">Art</h1>
+					<h3 class="box-title">Art</h3>
 					<p>
 						I've been drawing since I was very little, since I could really remember. It's probably the hobby I do the most and the thing that I'm best at. 
 					</p>
 					<a href="art.html" class="button">Read More</a>
 				</div>
+				<!-- Animation box -->
 				<div class="box" id="animation">
-					<h1 class="box-title">Animation</h1>
+					<h3 class="box-title">Animation</h3>
 					<p>
-						I don't animate quite as often as I draw since it's a whole lot more time consuming. 
+						I've been animating for quite a while now, definietly not as long as I have been drawing though. It's a lot of fun, but very time consuming. 
 					</p>
 					<a href="animation.html" class="button">Read More</a>
 				</div>
+				<!-- Programming box -->
 				<div class="box" id="programming">
-					<h1 class="box-title">Programming</h1>
+					<h3 class="box-title">Programming</h3>
 					<p>
-						Programming is a newer hobby of mine. I started quite a while ago, but I wouldn't do it very often.
+						Programming is a newer hobby of mine. I started quite a while ago, but I wouldn't do it very often. 
 					</p>
 					<a href="programming.html" class="button">Read More</a>
 				</div>
 			</div>
 		</div>
+		<!-- Footer with the html and css validators -->
 		<footer>
 			<div>css validator & html validator will be here</div>
+			<div>&copy; 2021 Monica Damyanova</div>
 		</footer>
-		<script> </script> <!--There's a bug with chrome which makes all the transitions play automatically and a script tag fixes it-->
+		<script> </script> <!-- There's a bug with chrome which makes all the transitions play automatically when the page is reloaded and a script tag fixes that -->
 	</body>
 </html>

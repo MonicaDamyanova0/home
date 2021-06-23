@@ -1,43 +1,40 @@
-/* Variables ====================================================================== */
+/* Variables for the colours ====================================================================== */
 :root {
 	--red: #bb6368;
-    --yellow: #e8c35a;
-    --purple: #924372;
+	--yellow: #e8c35a;
+	--purple: #924372;
 	--white: #f9f8f8;
 	--lightPink: #f0edee;
 	--black: #241f20;
 }
 
-/* General Styles ================================================================= */
+/* General Styles ================================================================================= */
 
 body {
 	margin: 0;
-	font-family: Helvetica;
+	font: 20px Helvetica;
 	background: var(--lightPink);
 }
 
 section {
-	margin: 3vh auto;
+	margin: 15px auto;
 	padding: 50px;
 	width: 65%;
 	background-color: var(--white);
 }
 
+/* A style to offset the first <section> from the top so it's not behind the header */
 .section-top {
 	margin: 115px auto 15px;
 }
 
-div {
-	font-size: 20px;
-	color: var(--black);
-}
-
 h1 {
-	font-size: 48px;
+	font-size: 45px;
 	padding: 0.3em;
 	margin: 0;
 	font-weight: normal;
 	letter-spacing: 5px;
+	text-transform: uppercase;
 }
 
 h2 {
@@ -65,8 +62,62 @@ hr {
 	margin: 10px;
 }
 
-/* Navigation Bar ================================================================= */
+img {
+	width: 100%;
+	max-width: 450px;
+}
 
+.center {
+	text-align: center;
+}
+
+/* Aligning images and any text that may be around them */
+.horizontal-boxes {
+	display: flex;
+	padding: 10px;
+}
+
+.reverse {
+	flex-direction: row-reverse;
+}
+
+/* Buttons ========================================================== */
+
+.button {
+	background-color: var(--red);
+	font-size: 16px;
+	padding: 15px;
+	color: var(--lightPink);
+	letter-spacing: 1.5px;
+	text-decoration: none;
+	display: inline-block;
+	transition: 0.1s;
+	margin: 10px;
+}
+
+.button:hover {
+	background-color: var(--lightPink);
+	color: var(--black);
+}
+
+/* Footer =========================================================== */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100px;
+	background-color: var();
+	border-top: 5px solid var(--white);
+}
+
+footer div {
+	margin: 6px auto;
+}
+
+/* Navigation Bar ================================================================================= */
+
+/* Have the header stay at the top */
 header {
 	position: fixed;
 	top: 0;
@@ -84,9 +135,9 @@ nav {
 	color: var(--lightPink);
 }
 
-#logo {
+.logo {
 	margin: 0 30px;
-	font-size: 30px;
+	font-size: 35px;
 	letter-spacing: 5px;
 	text-transform: uppercase;
 	color: var(--white);
@@ -101,6 +152,7 @@ nav {
 	flex-wrap: wrap;
 }
 
+/* Add styles to each button in the navigation bar */
 .menu a {
 	display: block;
 	text-align: center;
@@ -115,12 +167,13 @@ nav {
 	transition: 0.1s ease-out;
 }
 
+/* Give each button a hover transition */
 .menu a:hover {
 	background-color: rgba(247, 246, 241, 0.2);
 	color: var(--black);
 }
 
-/* Home page specific ============================================================= */
+/* Home page specific ============================================================================= */
 
 .intro {
 	font-size: 28px;
@@ -136,6 +189,8 @@ nav {
 	display: flex;
 }
 
+/* Get rid of the margins of the first and last topic containers so 
+the margins aren't too large at the top and bottom */
 .topic-container p:first-child {
 	margin-top: 0;
 }
@@ -159,25 +214,27 @@ nav {
 	padding: 40px;
 	font-size: 50px;
 	letter-spacing: 3px;
+	text-transform: uppercase;
 	margin-bottom: 25px;
 	background-color: rgba(247, 246, 241, 0.5);
 }
 
 .box-container {
 	display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: stretch;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
 }
 
 .box {
 	display: flex;
 	flex-direction: column;
-	width: 22vw;
+	width: 30%;
 	margin: 0;
 	background-color: var(--white);
 }
 
+/* Style the titles of each box */
 .box-title {
 	width: auto;
 	color: var(--lightPink);
@@ -186,6 +243,18 @@ nav {
 	font-size: 25px;
 }
 
+/* Give margins to the text in the boxes */ 
+.box p {
+	margin: 25px;
+}
+
+/* Change the buttons in the boxes slightly */
+.box .button {
+	margin: auto 20px 20px;
+	justify-self: flex-start;
+}
+
+/* Adding special styles to each box depending on the hobby */
 #art .box-title, #art .button {
 	background: var(--yellow);
 }
@@ -198,8 +267,148 @@ nav {
 	background: var(--purple);
 }
 
-.box p {
-	margin: 25px;
+/* Background Image Styles ========================================== */
+
+.image-container {
+	display: block;
+	margin: 0;
+	height: auto;
+	background-color: var(--white);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	padding: 12% 10%;
+}
+
+#landscape-image {
+	background-image: url("images/landscape.png");
+	margin: 105px 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#fall-image {
+	background-image: url("images/fall.png");
+}
+
+/* Hobbies page specific ========================================================================== */
+
+
+/* Center the buttons on the hobbies page navigation bar */
+#center-hobbies {
+	margin: auto;
+}
+
+/* Add a gradient background to the navigation bar for the hobbies page to match the navigation bar */
+#hobbies-menu-background {
+	background: linear-gradient(to right, #e8c35a, #bb6368, #924372);
+}
+
+/* Anchors used to link to different parts of the page */
+.anchor {
+	position: relative;
+	top: -110px;
+}
+
+/* Art page specific ============================================================================== */
+
+/* Gallery ========================================================== */
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	align-items:center;
+	justify-content:center;
+}
+
+.gallery-img {
+	width: 40%;
+	max-width: 450px;
+	margin: 5px;
+}
+
+/* Animation page specific ======================================================================== */
+
+/* Iframes ========================================================== */
+
+/* Allowing the Iframes to be scalable */
+.iframe-container {
+	position: relative;
+	padding-top: 56.25%;
+}
+
+iframe {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+}
+
+/* Table ============================================================ */
+
+/* Changing the table border */
+table, th, td {
+	border: 1px solid var(--black);
+	border-collapse: collapse;
+}
+
+/* Placing the table */
+table {
+	table-layout: fixed;
+	width: 100%;
+	margin: 10px;
+}
+
+/* Formatting the text in the table */
+th {
+	font-size: 22px;
+	font-weight: normal;
+	padding: 15px;
+}
+
+td {
+	font-size: 18px;
+	padding: 10px;
+	vertical-align: text-top;
+}
+
+/* Programming page specific ====================================================================== */
+
+/* Adjusting some of the elements' sizes to fit nicely */
+#programming-text {
+	width: 100%;
+}
+
+#dict-img {
+	max-width: 750px;
+	min-width: 300px;
+}
+
+/* Media queries ================================================================================== */
+
+/* Resizing and reorganizing elements once the page gets small enough */
+@media screen and (max-width: 1250px) {
+	/* Allow the horizontal boxes to wrap */
+	.horizontal-boxes {
+		flex-wrap: wrap;
+	}
+
+	/* Make the gallery a column of images */
+	.gallery {
+		flex-direction: column;
+	}
+
+	.gallery-img {
+		width: 100%;
+	}
+
+	.center {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 1000px) {
@@ -217,181 +426,10 @@ nav {
 	p, .topic-container p:first-child, .topic-container p:last-child {
 		margin: 10px;
 	} 
-}
 
-@media screen and (max-width: 1100px) {
 	.box {
 		width: 100%;
 		margin: 10px;
 		background-color: var(--white);
 	}
-}
-
-/* Buttons ======================================================================== */
-
-.button {
-	background-color: var(--red);
-	font-size: 16px;
-	padding: 15px;
-	color: var(--lightPink);
-	letter-spacing: 1.5px;
-	text-decoration: none;
-	display: inline-block;
-	transition: 0.1s;
-	margin: 10px;
-}
-
-.box .button {
-	margin: auto 20px 20px;
-	justify-self: flex-start;
-}
-
-.button:hover {
-	background-color: var(--lightPink);
-	color: var(--black);
-}
-
-/* Background Image Styles ======================================================== */
-
-.image-container {
-	display: block;
-	margin: 0;
-	height: auto;
-	background-color: var(--white);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center;
-    background-size: cover;
-    padding: 12% 10%;
-}
-
-.landscape-image {
-	background-image: url("images/landscape.png");
-	margin: 105px 0 0;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-.fall-image {
-	background-image: url("images/fall.png");
-}
-
-/* Iframes ======================================================================== */
-
-/* Allowing the Iframes to be scalable */
-.iframe-container {
-	position: relative;
-	padding-top: 56.25%;
-}
-
-iframe {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	border: none;
-}
-
-/* Images ========================================================================= */
-
-img {
-	width: 100%;
-	max-width: 450px;
-}
-
-/* Aligning the images and any text that may be around it */
-.horizontal-boxes {
-	display: flex;
-	padding: 5px;
-}
-
-.reverse {
-	flex-direction: row-reverse;
-}
-
-.vertical-boxes {
-	display: flex;
-	flex-direction: column;
-	padding: 5px;
-}
-
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	align-items:center;
-    justify-content:center;
-}
-
-.gallery-img {
-	width: 40%;
-	max-width: 450px;
-	margin: 5px;
-}
-
-.center {
-	text-align: center;
-}
-
-#programming-text {
-	width: 100%;
-}
-
-#dict-img {
-	max-width: 750px;
-	min-width: 300px;
-}
-
-/* Resizing and reorganizing things once the page gets small enough */
-@media screen and (max-width: 1200px) {
-	.horizontal-boxes {
-		flex-wrap: wrap;
-	}
-
-	.gallery {
-		flex-direction: column;
-	}
-
-	.gallery-img {
-		width: 100%;
-	}
-}
-
-/* Table ========================================================================== */
-
-/* Changing the table border */
-table, th, td {
-	border: 2px solid var(--black);
-	border-collapse: collapse;
-}
-
-table {
-	table-layout: fixed;
-	width: 100%;
-	margin: 10px;
-}
-
-th {
-	font-size: 22px;
-	font-weight: normal;
-	padding: 15px;
-}
-
-td {
-	font-size: 18px;
-	padding: 10px;
-	vertical-align: text-top;
-}
-
-/* Footer ========================================================================= */
-
-footer {
-	height: 100px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	background-color: var();
-	border-top: 5px solid var(--white);
 }
